@@ -1,0 +1,15 @@
+# Java
+*.class
+*.log
+
+# Eclipse / IDE
+.project
+.classpath
+.settings/
+
+# Build
+/build/
+
+# OS
+.DS_Store
+Thumbs.db

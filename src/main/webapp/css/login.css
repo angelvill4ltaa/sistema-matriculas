@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+}
+
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 4.5rem 3.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 540px;
+    position: relative;
+    animation: slideDown 0.8s ease, fadeIn 0.8s ease;
+    transition: transform 0.3s ease;
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-60px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #111;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form-floating {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    transform: scale(.85) translateY(-1.5rem) translateX(.15rem);
+    color: #111;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border-color: #111;
+    box-shadow: 0 0 0 0.15rem rgba(0,0,0,.2);
+}
+
+.form-floating i {
+    color: #6b7280;
+    transition: all 0.3s;
+}
+
+.form-floating .form-control:focus ~ label i {
+    color: #111;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: #111;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, #7a7f87, #5f6670);
+    border: none;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    font-size: 1.05rem;
+    padding: 0.70rem 0;
+}
+
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active {
+    background: linear-gradient(135deg, #7a7f87, #5f6670);
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    transform: none;
+    outline: none;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.options a {
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.options a:hover {
+    color: #111;
+}
+
+.alert-message {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+
+.alert-message.show {
+    opacity: 1;
+}
+
+@media (max-width: 576px){
+    .login-card {
+        padding: 2rem 1.5rem;
+        width: 90%;
+    }
+}
+
+

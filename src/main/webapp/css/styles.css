@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body {
+    background: #f2f4f7;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+}
+
+.navbar-custom{
+    background:#153a5b;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link{
+    color:#fff!important;
+}
+
+.container{
+    padding-top:2rem;
+}
+
+.dashboard-card{
+    background:#ffffff;
+    border-radius:0.6rem;
+    padding:2rem 1rem;
+    text-align:center;
+    border:1px solid #dee2e6;
+    cursor:pointer;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.10);
+}
+
+.dashboard-card i{
+    font-size:3rem;
+    margin-bottom:1rem;
+    color: inherit;  
+}
+
+.dashboard-card h5{
+    font-weight:600;
+    margin:0;
+    color:#222;
+}

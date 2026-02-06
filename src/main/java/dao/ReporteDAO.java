@@ -11,13 +11,12 @@ public class ReporteDAO {
 	public List<Object[]> alumnosPorCurso() {
 	    List<Object[]> lista = new ArrayList<>();
 	    String sql = """
-	        SELECT c.nombre, COUNT(m.id)
-	        FROM cursos c
-	        LEFT JOIN matriculas m 
-	               ON c.id = m.curso_id
-	              AND m.estado = 'Pendiente'
-	        GROUP BY c.id
-	    """;
+            SELECT c.nombre, COUNT(m.id)
+            FROM cursos c
+            LEFT JOIN matriculas m ON c.id = m.curso_id
+            GROUP BY c.id
+            ORDER BY COUNT(m.id) DESC
+        """;
 
 	    try (Connection cn = Conexion.getConexion();
 	         PreparedStatement ps = cn.prepareStatement(sql);

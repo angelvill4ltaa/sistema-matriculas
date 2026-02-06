@@ -50,7 +50,6 @@
         </div>
     </div>
 
-    <!-- 📊 GRÁFICOS -->
     <div class="row mb-4">
         <div class="col-md-6">
             <div class="card shadow p-3">
